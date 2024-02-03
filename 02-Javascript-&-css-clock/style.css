@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background: #018DED;
+    font-family: 'helvetica neue';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
