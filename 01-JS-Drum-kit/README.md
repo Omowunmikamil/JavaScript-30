@@ -10,9 +10,10 @@ This is a simple drum kit project built with HTML, CSS, and JavaScript. It allow
 ## Installation
 1. __Clone the repository:__
 ```
-git clone https://github.com/Omowunmikamil/JavaScript-30/tree/master/01-JS-Drum-kit
+git clone https://github.com/Omowunmikamil/JavaScript-30
 ```
-2. __Open the `index.html` file in your browser.__
+2. navigate to the project directory
+3. __Open the `index.html` file in your browser.__
 
 ## Usage
 - Press the keys on your keyboard to play the drum sounds.
