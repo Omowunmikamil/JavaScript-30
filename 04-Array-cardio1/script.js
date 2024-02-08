@@ -29,7 +29,7 @@ let fifteenHundreds = inventors.filter(function(inventor) {
 });
 console.table(fifteenHundreds);
 
-//1,b. Using arrow function
+//1.b. Using arrow function
 let fifteenHundredsArrow = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year <= 1599))
 console.table(fifteenHundredsArrow); // same result
 
@@ -111,7 +111,50 @@ console.table(sortbyYearsLivedArrow); // same result
 // 6.a. Go to https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 // 6.b. Open the console and run the following code
-const category = document.querySelector('.mw-category'); // select the category
-let links = category.querySelectorAll('a'); // NodeList(144) [a, a, a, a, a, a, a, a, a, a, …]
+//  const category = document.querySelector('.mw-category'); // select the category
+//  const links = Array.from(category.querySelectorAll('a')); // select all the links in the category and convert it to an array
+//  const de = links
+        //    .map(link => link.textContent) // get the text content of each link
+        //    .filter(streetName => streetName.includes('de')); // filter the street names that contain 'de'
 
-let de = links.map(link => link.textConttent); // TypeError: links.map is not a function
+// 7. Sort the people alphabetically by last name
+// 7.a. Using function
+let sortByLastName = people.sort(function(lastName, nextLastName) {
+    const [alast, afirst] = lastName.split(', '); // split the last name and first name
+    const [blast, bfirst] = nextLastName.split(', '); // split the last name and first name
+    return alast > blast ? 1 : -1; // sort by last name
+})
+console.log(sortByLastName); // sorted by last name
+
+// 7.b. Using arrow function
+let sortByLastNameArrow = people.sort((lastName, nextLastName) => {
+    const [alast, afirst] = lastName.split(', '); // split the last name and first name
+    const [blast, bfirst] = nextLastName.split(', '); // split the last name and first name
+    return alast > blast ? 1 : -1; // sort by last name
+})
+console.log(sortByLastNameArrow); // sorted by last name
+
+// 7.c. Using if else statement
+let sortByLastNameIfElse = people.sort(function(lastName, nextLastName) {
+    const [alast, afirst] = lastName.split(', '); // split the last name and first name
+    const [blast, bfirst] = nextLastName.split(', '); // split the last name and first name
+    if (alast > blast) { // sort by last name
+        return 1;
+    } else {
+        return -1;
+    }
+})
+console.table(sortByLastNameIfElse); // sorted by last name
+
+// 8. Reduce Exercise
+// Sum up the instances of each of these
+let data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+let transportation = data.reduce(function(obj, item) { // reduce the data array to an object
+    if (!obj[item]) { // if the item does not exist in the object
+        obj[item] = 0; // add the item to the object
+    }
+    obj[item]++; // increment the value of the item
+    return obj; // return the object
+}, {});
+console.log(transportation) // {car: 5, truck: 3, bike: 2, walk: 2, van: 2}
