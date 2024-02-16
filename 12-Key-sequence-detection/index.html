@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Key Sequence</title>
+</head>
+<body>
+    
+    <!-- Include Cornify library -->
+    <script src="https://www.cornify.com/js/cornify.js"></script>
+    
+    <script>
+        const pressed = [];
+        const secretCode = "omowunmi";
+  
+        window.addEventListener("keyup", (e) => {
+          console.log(e.key);
+          pressed.push(e.key);
+          pressed.splice(0, pressed.length - secretCode.length);
+          if (pressed.join("").includes(secretCode)) {
+            console.log("DING DING!");
+            cornify_add(); // Call cornify_add() function
+          }
+          console.log(pressed);
+        });
+    </script>
+
+</body>
+</html>
