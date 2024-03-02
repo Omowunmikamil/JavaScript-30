@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'helvetica neue';
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    align-items: center;
+    background: e95cac;
+    background-image: 
+    radial-gradient(circle at 100% 150%,  #e95cac 24%, #d242cb 25%, #d242cb 28%, #e95cac 29%, #e95cac 36%, #d242cb 36%, #d242cb 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%,  #e95cac 24%, #d242cb 25%, #d242cb 28%, #e95cac 29%, #e95cac 36%, #d242cb 36%, #d242cb 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, #d242cb 10%, #e95cac 11%, #e95cac 23%, #d242cb 24%, #d242cb 30%, #e95cac 31%, #e95cac 43%, #d242cb 44%, #d242cb 50%, #e95cac 51%, #e95cac 63%, #d242cb 64%, #d242cb 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%,  #d242cb 5%, #e95cac 6%, #e95cac 15%, #d242cb 16%, #d242cb 20%, #e95cac 21%, #e95cac 32%, #d242cb 33%, #d242cb 39%, #e95cac 40%, #e95cac 52%, #d242cb 53%, #d242cb 59%, #e95cac 60%, #e95cac 72%, #d242cb 73%, #d242cb 79%, transparent 79%, transparent),
+    radial-gradient(circle at 0 50%,   #d242cb 5%, #e95cac 6%, #e95cac 15%, #d242cb 16%, #d242cb 20%, #e95cac 21%, #e95cac 32%, #d242cb 33%, #d242cb 39%, #e95cac 40%, #e95cac 52%, #d242cb 53%, #d242cb 59%, #e95cac 60%, #e95cac 72%, #d242cb 73%, #d242cb 79%, transparent 79%, transparent);
+    background-size: 100px 50px;
+}
+.voiceinator {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+h1 {
+    width: calc(100% * 4rem);
+    margin: -2rem -2rem 2rem -2rem;
+    padding: .4rem;
+    background: #00aaff;
+    border-bottom: 5px solid #10baf3;
+    text-align: center;
+    text-shadow: 3px 3px 0 #10baf3;
+    font-size: 3rem;
+    font-weight: 200;
+    font-family: 'Pacifico', cursive;
+}
+.voiceinator input,
+.voiceinator select,
+.voiceinator textarea,
+.voiceinator button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f7f7f7;
+    font-size: 1rem;
+    border: 0;
+    outline: 0;
+}
+textarea {
+    height: 14rem;
+}
+.voiceinator button {
+    position: relative;
+    width: 49%;
+    background: #00aaff;
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    margin-bottom: 0;
+    float: left;
+    border: 0;
+    border-bottom: 5px solid #10baf3;
+}
+.voiceinator button:active {
+    top: 2px;
+}
+.voiceinator button:nth-of-type(1) {
+    margin-right: 2%;
+}
